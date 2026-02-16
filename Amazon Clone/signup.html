@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body style="
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:  linear-gradient(135deg, #1f4037, #99f2c8);
+    ">
+    <div style="
+    background : linear-gradient(135deg, #667eea, #764ba2);
+    padding: 30px;
+    border-radius: 10px;
+    ">
+    <h2>Signup</h2>
+    <input type="text" id="newUser" placeholder="Create Username"><br><br>
+    <input type="password" id="newPass" placeholder="Create Password"><br><br>
+
+    <button onclick="signup()">Signup</button>
+    </div>
+
+    <script>
+        function signup(){
+        let user = document.getElementById("newUser").value;
+        let pass = document.getElementById("newPass").value;
+        localStorage.setItem("username", user);
+        localStorage.setItem("password",pass);
+        alert("Signup Successfully");
+        window.location.href="login.html";
+        }
+    </script>
+    </body>
+</html>
